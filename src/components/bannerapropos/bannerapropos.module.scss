@@ -1,0 +1,33 @@
+.banner {
+    border-radius: 25px;
+    height: 223px;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.bannerimg {
+    border-radius: 25px;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.bannerdark {
+    background-color: #000000;
+    border-radius: 25px;
+    height: 100%;
+    left: 0;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.bannertxt {
+    color: #ffffff;
+    font-size: 48px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

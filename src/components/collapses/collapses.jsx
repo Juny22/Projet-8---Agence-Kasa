@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import sassStyles from './collapses.module.scss'
+import sassStyles from './Collapses.module.scss'
 import fleche from "../../assets/Images/Collapses/Fleche.svg";
 
 function Collapses({titre, description}) {
@@ -13,9 +13,7 @@ function Collapses({titre, description}) {
                     <img src={fleche} alt="Ouvrir cette liste" />
                 </span>
             </div>
-            {
-                ouvert && <div className={sassStyles.descriptioncollapses}>{description}</div>
-            }
+            {ouvert && <div className={sassStyles.descriptioncollapses}>{description}</div>}
         </div>
     );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Accueil from "../pages/Accueil/Accueil";
 import Fiche from '../pages/Fiche-logement/Fiche-logement';
 import APropos from "../pages/A-propos/A-propos";
@@ -7,7 +7,46 @@ import Erreur from "../pages/Error/Error";
 
 
 function RoutesPath() {
-    return(
+    const genericLoader = async( { params } ) => {
+        console.log('params', params)
+            const req = await fetch('./logements.json');
+            const res = await req.json();
+            console.log('res', res);
+            return res;
+    };
+    const router = createBrowserRouter([
+        {
+            path: "/",
+            loader: genericLoader,
+            element: <Accueil />,
+            errorElement: <Erreur />
+        },
+        {
+            path: "/accueil",
+            loader: genericLoader,
+            element: <Accueil />,
+            errorElement: <Erreur />
+        },
+        {
+            path: "/logement/:id",
+            loader: genericLoader,
+            element: <Fiche />,
+            errorElement: <Erreur />
+        },
+        {
+            path: "/a-propos",
+            loader: genericLoader,
+            element: <APropos />,
+            errorElement: <Erreur />
+        },
+        {
+            path: "*",
+            element: <Erreur />,
+        }      
+    ]);
+    return (<RouterProvider router={router}></RouterProvider>)
+
+    /*return(
         <Router>
             <Routes>
                 <Route path="/" element={<Accueil />}/>
@@ -16,10 +55,9 @@ function RoutesPath() {
 -               <Route path="/a-propos" element={<APropos />}/>
 -               <Route path="*" element={<Erreur />}/>
             </Routes>
-        </Router>
-                
-            
-    );
+        </Router>      
+    );*/
 }
 
 export default RoutesPath;
+

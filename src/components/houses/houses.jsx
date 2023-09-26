@@ -1,5 +1,5 @@
 import React from "react";
-import sassStyles from './houses.module.scss'
+import sassStyles from './Houses.module.scss'
 
 function Houses({id, image, titre}) {
     return(

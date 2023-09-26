@@ -1,0 +1,40 @@
+.carrousel {
+    display: block;
+    height: 415px;
+    margin: auto auto 30px auto;
+    position: relative;
+    width: 100%;
+}
+
+.arrow {
+    position: absolute;
+    width: 45px;
+    z-index: 1;
+}
+.arrow:hover {
+    cursor: pointer;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.leftarrow {
+    margin-left: 25px;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+}
+.rightarrow {
+    margin-right: 25px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carrouselimg {
+    border-radius: 15px;
+    height: 415px;
+    object-fit: cover;
+    display: none;
+    width: 100%
+}
+.carrouselimg.actif {
+    display: block;
+}

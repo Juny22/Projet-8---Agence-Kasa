@@ -1,5 +1,5 @@
 import React from "react";
-import sassStyles from './banner.module.scss'
+import sassStyles from './Banner.module.scss'
 
 function Banner({image, texte}) {
     return(

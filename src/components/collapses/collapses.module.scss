@@ -24,16 +24,18 @@
   .flechecollapses {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     margin-right: 10px;
     width: 100%;
   }
+
   .flechecollapses:hover {
       cursor: pointer;
   }
   
   .flechecollapses.true {
     justify-content: start;
-    transform: rotate(-180deg);
+    transform: rotate(180deg);
   }
   
   .descriptioncollapses {
@@ -46,4 +48,3 @@
     min-height: 100px;
     padding: 25px 10px 10px 10px;
   }
-  

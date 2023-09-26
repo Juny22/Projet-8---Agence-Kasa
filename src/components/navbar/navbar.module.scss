@@ -6,26 +6,43 @@ header {
     width: 100%;
   }
   
-  header > img {
+header > img {
     height: 68px;
   }
   
-  nav {
+nav {
     justify-content: flex-end;
     display: flex;
     width: 100%;
   }
   
-  .liensite {
+.liensite {
     color: #ff6060;
     margin: auto 25px;
     text-decoration: none;
+    font-size: 34px;
   }
-  .liensite:hover {
-     text-decoration: underline;
+
+.liensite:hover {
+    color: #000000;
+    border-bottom: 2px solid #ff6060;
   }
   
-  .lienmenu.active {
-      border-bottom: 1px solid #ff6060;
+.lienmenu.active {
+    border-bottom: 1px solid #ff6060;
   }
+
+  @media screen and (max-width: 1490px) {
+    header {
+      margin: 40px 2.5%;
+      width: 95%;
+    }
+    
+    header > img {
+      height: 47px;
+    }
   
+    .liensite {
+      margin: auto 5px;
+    }
+  }

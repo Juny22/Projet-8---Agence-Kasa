@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, useLoaderData, Navigate, } from "react-router-dom";
+import { useParams, useLoaderData, Navigate } from "react-router-dom";
 import sassStyles from './Fiche-logement.module.scss';
 import Name from "../../components/Name/Name";
 import Carrousel from "../../components/Carrousel/Carrousel";
@@ -32,12 +32,12 @@ function FicheLogementContent({ ficheLogement }) {
   ));
 
   return (
-    <div className={sassStyles.Fiche}>
+    <div className={sassStyles.fiche}>
       <Carrousel images={ficheLogement?.pictures} />
       <div className={sassStyles.logementspropietaire}>
         <div className={sassStyles.informationlogements}>
-          <span className={sassStyles.titrelogement}>{ficheLogement?.title}</span>
-          <span className={sassStyles.endroitlogement}>{ficheLogement?.location}</span>
+          <span className={sassStyles.titre}>{ficheLogement?.title}</span>
+          <span className={sassStyles.endroit}>{ficheLogement?.location}</span>
           <div>{tagsLogement}</div>
         </div>
 
@@ -83,3 +83,35 @@ function FicheLogement() {
 }
 
 export default FicheLogement;
+
+
+/*
+useNagivate
+
+function FicheLogement() {
+  const { id } = useParams();
+  const ListeLogements = useLoaderData();
+  const navigate = useNavigate(); // Obtenir la fonction de navigation de React Router
+
+  const ficheLogement = ListeLogements.find(logement => logement.id === id);
+
+  if (!ficheLogement) {
+    // Si le logement n'est pas trouvé, naviguer vers la page d'erreur
+    navigate('/Erreur', { replace: true });
+    return null;
+     // Vous pouvez renvoyer quelque chose d'autre ici ou utiliser un indicateur de chargement
+  }
+
+  return (
+    <div>
+      <div className={sassStyles.bodymargin}>
+        <Navbar />
+        <FicheLogementContent ficheLogement={ficheLogement} />
+      </div>
+      <Footer />
+    </div>
+  );
+}
+
+export default FicheLogement;*/
+

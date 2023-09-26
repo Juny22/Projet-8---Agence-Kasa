@@ -12,3 +12,18 @@
     margin-left: 3%;
     margin-right: 3%;
 }
+
+@media screen  and (max-width: 1490px) {
+
+    .Accueil > .banniere {
+        height: 110px;
+        margin-bottom: 20px;
+    }
+
+    .listelogements {
+        background-color: unset;
+        gap: 20px 0;
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+}

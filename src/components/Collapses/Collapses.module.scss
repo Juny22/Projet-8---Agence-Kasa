@@ -4,7 +4,7 @@
     text-align: left;
   }
   
-  .headercollapses {
+  .header {
     align-items: center;
     background-color: #ff6060;
     border-radius: 5px;
@@ -14,14 +14,14 @@
     width: 100%;
   }
   
-  .titrecollapses {
+  .titre {
     color: #ffffff;
     height: 50px;
     line-height: 50px;
     margin: 5px 10px;
   }
   
-  .flechecollapses {
+  .chevron {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -29,22 +29,24 @@
     width: 100%;
   }
 
-  .flechecollapses:hover {
+  .chevron:hover {
       cursor: pointer;
   }
   
-  .flechecollapses.true {
+  .chevron.true {
     justify-content: start;
     transform: rotate(180deg);
   }
   
-  .descriptioncollapses {
+  .content {
     background-color: #f6f6f6;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     color: #ff6060;
     height: 75%;
     margin-top: -10px;
+    max-height: 0;
     min-height: 100px;
     padding: 25px 10px 10px 10px;
+    transition: 1s max-height 0.3s;
   }

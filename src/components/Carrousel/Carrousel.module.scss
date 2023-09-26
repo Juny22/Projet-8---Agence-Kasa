@@ -4,6 +4,7 @@
     margin: auto auto 30px auto;
     position: relative;
     width: 100%;
+    margin-bottom: 60px;
 }
 
 .arrow {
@@ -38,3 +39,18 @@
 .carrouselimg.actif {
     display: block;
 }
+
+.imageContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Centre horizontalement
+    justify-content: center; // Centre verticalement
+    text-align: center; // Centre le texte horizontalement (si nécessaire)
+  }
+  
+  .imageNumber {
+    position: absolute;
+    color: #ffffff;
+    bottom: 20px;
+  }

@@ -17,6 +17,7 @@
 
 .titrelogement {
     font-size: 36px;
+    font-weight: bold;
 }
 
 .endroitlogement {
@@ -74,4 +75,68 @@
 .bodymargin {
     margin-left: 3%;
     margin-right: 3%;
+}
+
+@media screen and (max-width: 1490px) {
+
+    .logementspropietaire {
+        display: block;
+    }
+
+    .titrelogement {
+        display: block;
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    .endroitlogement {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .tags {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 10px 0;
+    }
+
+    .tags > .tag {
+        margin-left: 0px;
+        min-width: 50px;
+    }
+
+    .proprietairenote {
+        display: inline-flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        margin-top: 25px;
+        width: 100%;
+    }
+
+    .informationpropietaire {
+        margin-bottom: unset;
+        width: 100%;
+    }
+
+    .photopropietaire {
+        height: 32px;
+        width: 32px;
+    }
+
+    .etoile {
+        height: 25px;
+        width: 25px;
+    }
+
+    .descriptionequipements {
+        display: block;
+    }
+
+    .descriptionequipements > .collapse {
+        width: 100%;
+    }
+    
+    .collapse {
+        margin-bottom: 20px;
+    }
 }

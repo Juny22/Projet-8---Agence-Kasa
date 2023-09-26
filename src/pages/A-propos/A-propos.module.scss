@@ -7,3 +7,10 @@
     margin-left: 3%;
     margin-right: 3%;
 }
+
+@media screen and (max-width: 1490px) {
+    .collapsemargin {
+        margin-left: 0;
+        margin-right: 0;
+    }
+  }

@@ -5,7 +5,7 @@ import RoutesPath from "./Routes/Routes";
 function App() {
     return (
         <div className="App">
-            <RoutesPath/>
+            <RoutesPath /> {/* Routes et contenu principal */}
         </div>
     );
 }

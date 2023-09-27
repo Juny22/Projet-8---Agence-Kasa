@@ -1,17 +1,18 @@
 import React from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import sassStyles from './Navbar.module.scss'
 import logoRed from "../../assets/Images/Logo/Logo.png";
-import { NavLink } from "react-router-dom";
 
 function Navbar() {
-    return(
+    const location = useLocation();
+
+    return (
         <header>
             <img src={logoRed} alt="Logo"/>
             <nav>
-                <NavLink to="/accueil" className={`${sassStyles.liensite} ${sassStyles.lienmenu}`}>Accueil</NavLink>
-                <NavLink to="/a-propos" className={`${sassStyles.liensite} ${sassStyles.lienmenu}`}>A propos</NavLink>
+                <NavLink to="/accueil" className={`${sassStyles.liensite} ${location.pathname === "/accueil" ? sassStyles.active : ""}`}>Accueil</NavLink>
+                <NavLink to="/a-propos" className={`${sassStyles.liensite} ${location.pathname === "/a-propos" ? sassStyles.active : ""}`}>A propos</NavLink>
             </nav>
-
         </header>
     );
 }

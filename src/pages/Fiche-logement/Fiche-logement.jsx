@@ -65,6 +65,8 @@ function FicheLogementContent({ ficheLogement }) {
 function FicheLogement() {
   const { id } = useParams();
   const ListeLogements = useLoaderData();
+  console.log('ID extrait de l\'URL :', id);
+  console.log('Liste des logements :', ListeLogements);
   const ficheLogement = ListeLogements.find(logement => logement.id === id);
 
   return (

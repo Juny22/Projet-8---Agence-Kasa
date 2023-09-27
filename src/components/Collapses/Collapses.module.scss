@@ -4,7 +4,7 @@
     text-align: left;
   }
   
-  .header {
+.header {
     align-items: center;
     background-color: #ff6060;
     border-radius: 5px;
@@ -14,14 +14,14 @@
     width: 100%;
   }
   
-  .titre {
+.titre {
     color: #ffffff;
     height: 50px;
     line-height: 50px;
     margin: 5px 10px;
   }
   
-  .chevron {
+.chevron {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -29,16 +29,20 @@
     width: 100%;
   }
 
-  .chevron:hover {
+.chevron:hover {
       cursor: pointer;
   }
-  
-  .chevron.true {
-    justify-content: start;
+
+.chevron img {
+    transition: transform 0.3s ease;
+  }
+
+.chevron.true img {
     transform: rotate(180deg);
+    transition: transform 0.3s ease;
   }
   
-  .content {
+.content {
     background-color: #f6f6f6;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;

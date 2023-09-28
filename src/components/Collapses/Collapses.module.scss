@@ -47,10 +47,23 @@
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     color: #ff6060;
-    height: 75%;
-    margin-top: -10px;
     max-height: 0;
-    min-height: 100px;
-    padding: 25px 10px 10px 10px;
-    transition: 1s max-height 0.3s;
+    overflow: hidden;
+    padding: 0px 10px 0px 10px;
+    transition-timing-function: ease-in;
+    transition-property: max-height;
+    transition-duration: 0.25s;
+  }
+
+  .opened {
+    max-height: 100px;
+  }
+
+  @media screen  and (max-width: 992px) {
+    .content {
+      transition-duration: 0.5s;
+    }
+    .opened {
+      max-height: 220px;
+    }
   }

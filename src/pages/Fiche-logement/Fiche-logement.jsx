@@ -38,7 +38,7 @@ function FicheLogementContent({ ficheLogement }) {
         <div className={sassStyles.informationlogements}>
           <span className={sassStyles.titre}>{ficheLogement?.title}</span>
           <span className={sassStyles.endroit}>{ficheLogement?.location}</span>
-          <div>{tagsLogement}</div>
+          <div className={sassStyles.tags}>{tagsLogement}</div>
         </div>
 
         <div className={sassStyles.proprietairenote}>

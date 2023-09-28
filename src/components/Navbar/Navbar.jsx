@@ -10,7 +10,7 @@ function Navbar() {
         <header>
             <img src={logoRed} alt="Logo"/>
             <nav>
-                <NavLink to="/accueil" className={`${sassStyles.liensite} ${location.pathname === "/accueil" ? sassStyles.active : ""}`}>Accueil</NavLink>
+                <NavLink to="/accueil" className={`${sassStyles.liensite} ${location.pathname === "/accueil" || location.pathname === "/" ? sassStyles.active : ""}`}>Accueil</NavLink>
                 <NavLink to="/a-propos" className={`${sassStyles.liensite} ${location.pathname === "/a-propos" ? sassStyles.active : ""}`}>A propos</NavLink>
             </nav>
         </header>

@@ -18,9 +18,9 @@ function Collapses({ titre, description }) {
                     <img className={ouvert ? 'rotate' : ''} src={chevron} alt="Chevron" />
                 </span>
             </div>
-            <div>
-            {ouvert && <div className={sassStyles.content}>{description}</div>}
-            </div>
+            
+            <div className={`${sassStyles.content} ${ouvert ? sassStyles.opened : ''}`}><p>{description}</p></div>
+            
         </div>
     );
 }

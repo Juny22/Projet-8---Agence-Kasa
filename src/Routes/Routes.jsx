@@ -6,13 +6,6 @@ import APropos from "../pages/A-propos/A-propos";
 import Erreur from "../pages/Error/Error";
 
 function RoutesPath() {
-  /*const genericLoader = async ({ params }) => {
-    console.log('params', params);
-    const req = await fetch('/logements.json');
-    const res = await req.json();
-    console.log('res', res);
-    return res;
-  };*/
   const genericLoader = async ({ params }) => {
     const { id } = params; // Extrayez l'ID du paramètre d'URL
     console.log('ID du logement', id);
@@ -59,18 +52,6 @@ function RoutesPath() {
   return (
     <RouterProvider router={router}></RouterProvider>
   );
-
-  /*return(
-        <Router>
-            <Routes>
-                <Route path="/" element={<Accueil />}/>
-                <Route path="/accueil" element={<Accueil />}/>
-                <Route path="/logement/:id" element={<Fiche />}/>
-                <Route path="/a-propos" element={<APropos />}/>
-                <Route path="*" element={<Erreur />}/>
-            </Routes>
-        </Router>      
-    );*/
 }
 
 export default RoutesPath;

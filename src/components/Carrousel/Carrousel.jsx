@@ -4,8 +4,10 @@ import arrow from "../../assets/Images/Carrousel/Fleche.png";
 
 function Carrousel({ images }) {
     let [imgAfficher, changerImg] = useState(0);
+    // Obtient le nombre total d'images dans le carrousel
     let nombreImg = images.length;
-  
+
+    // Fonction pour passer à l'image précédente
     const imgPrecedente = () => {
       if (imgAfficher === 0) {
         changerImg(nombreImg - 1);
@@ -13,7 +15,8 @@ function Carrousel({ images }) {
         changerImg(imgAfficher - 1);
       }
     };
-  
+
+    // Fonction pour passer à l'image suivante
     const imgSuivante = () => {
       if (imgAfficher === nombreImg - 1) {
         changerImg(0);
@@ -22,11 +25,13 @@ function Carrousel({ images }) {
       }
     };
   
+    // Calcul du numéro de l'image actuellement affichée (index + 1)
     const numeroImage = imgAfficher + 1;
   
     return (
       <div className={sassStyles.carrousel}>
         {nombreImg > 1 && (
+          // Affiche une flèche de gauche pour passer à l'image précédente
           <img
             className={`${sassStyles.arrow} ${sassStyles.leftarrow}`}
             src={arrow}
@@ -52,6 +57,7 @@ function Carrousel({ images }) {
           })}
         </div>
         {nombreImg > 1 && (
+          // Affiche une flèche de droite pour passer à l'image suivante
           <img
             className={`${sassStyles.arrow} ${sassStyles.rightarrow}`}
             src={arrow}

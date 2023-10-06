@@ -10,6 +10,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 
 function FicheLogementContent({ ficheLogement }) {
+  // Crée une liste de composants <Name> à partir des tags du logement
   const tagsLogement = ficheLogement?.tags.map((tags, index) => (
     <Name key={index} nom={tags} />
   ));
@@ -17,20 +18,24 @@ function FicheLogementContent({ ficheLogement }) {
   let noteLogement = [];
   let etoileComplete = true;
   for (let index = 0; index < 5; index++) {
+      // Vérifie si l'index correspond à la note pour déterminer si une étoile est complète ou non
       if(index === parseInt(ficheLogement?.rating)) {
           etoileComplete = false;
       }
+      // Ajoute une étoile remplie ou vide au tableau en fonction de etoileComplete
       if(etoileComplete === true) {
           noteLogement.push(<img key={index} className={sassStyles.etoile} src={EtoileRouge} alt={`${ficheLogement?.rating}/5`}/>)
       } else {
           noteLogement.push(<img key={index} className={sassStyles.etoile} src={EtoileBlanc} alt={`${ficheLogement?.rating}/5`}/>)
       }
   }
-
+  
+  // Crée une liste d'éléments <li> à partir des équipements du logement
   const equipementsLogement = ficheLogement?.equipments.map((equipment, index) => (
     <li key={index}>{equipment}</li>
   ));
 
+  // Rendu final de la fiche du logement
   return (
     <div className={sassStyles.fiche}>
       <Carrousel images={ficheLogement?.pictures} />
@@ -85,35 +90,4 @@ function FicheLogement() {
 }
 
 export default FicheLogement;
-
-
-/*
-useNagivate
-
-function FicheLogement() {
-  const { id } = useParams();
-  const ListeLogements = useLoaderData();
-  const navigate = useNavigate(); // Obtenir la fonction de navigation de React Router
-
-  const ficheLogement = ListeLogements.find(logement => logement.id === id);
-
-  if (!ficheLogement) {
-    // Si le logement n'est pas trouvé, naviguer vers la page d'erreur
-    navigate('/Erreur', { replace: true });
-    return null;
-     // Vous pouvez renvoyer quelque chose d'autre ici ou utiliser un indicateur de chargement
-  }
-
-  return (
-    <div>
-      <div className={sassStyles.bodymargin}>
-        <Navbar />
-        <FicheLogementContent ficheLogement={ficheLogement} />
-      </div>
-      <Footer />
-    </div>
-  );
-}
-
-export default FicheLogement;*/
 

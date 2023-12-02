@@ -8,12 +8,10 @@ import Erreur from "../pages/Error/Error";
 function RoutesPath() {
   const genericLoader = async ({ params }) => {
     const { id } = params; // Extrayez l'ID du paramètre d'URL
-    console.log('ID du logement', id);
     
     // Chargez les données spécifiques au logement avec l'ID donné
-    const req = await fetch(`/logements.json?id=${id}`);
+    const req = await fetch(`./logements.json?id=${id}`);
     const res = await req.json();
-    console.log('Données du logement', res);
     
     return res;
   };

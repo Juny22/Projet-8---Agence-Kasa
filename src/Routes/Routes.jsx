@@ -18,36 +18,39 @@ function RoutesPath() {
     return res;
   };
 
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      loader: genericLoader,
-      element: <Accueil />,
-      errorElement: <Erreur />
-    },
-    {
-      path: "/accueil",
-      loader: genericLoader,
-      element: <Accueil />,
-      errorElement: <Erreur />
-    },
-    {
-      path: "/logement/:id",
-      loader: genericLoader,
-      element: <FicheLogement />,
-      errorElement: <Erreur />
-    },
-    {
-      path: "/a-propos",
-      loader: genericLoader,
-      element: <APropos />,
-      errorElement: <Erreur />
-    },
-    {
-      path: "*",
-      element: <Erreur />,
-    }
-  ]);
+  const router = createBrowserRouter({
+    routes: [
+      {
+        path: "/",
+        loader: genericLoader,
+        element: <Accueil />,
+        errorElement: <Erreur />
+      },
+      {
+        path: "/accueil",
+        loader: genericLoader,
+        element: <Accueil />,
+        errorElement: <Erreur />
+      },
+      {
+        path: "/logement/:id",
+        loader: genericLoader,
+        element: <FicheLogement />,
+        errorElement: <Erreur />
+      },
+      {
+        path: "/a-propos",
+        loader: genericLoader,
+        element: <APropos />,
+        errorElement: <Erreur />
+      },
+      {
+        path: "*",
+        element: <Erreur />,
+      }
+    ],
+    basename: process.env.PUBLIC_URL
+  });
 
   return (
     <RouterProvider router={router}></RouterProvider>

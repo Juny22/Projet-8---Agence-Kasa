@@ -49,9 +49,9 @@ function RoutesPath() {
         element: <Erreur />,
       }
     ],
-    basename: process.env.PUBLIC_URL
+    basename: '/Projet-8---Agence-Kasa/'
   });
-
+  
   return (
     <RouterProvider router={router}></RouterProvider>
   );

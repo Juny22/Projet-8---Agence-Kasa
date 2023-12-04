@@ -18,7 +18,7 @@ function Accueil() {
             <Navbar/>
             <Banner image={Bannerimg} texte="Chez vous, partout et ailleurs"/>
                 <div className={sassStyles.listelogements}>
-                    {listeLogements.map((logement) => <NavLink key={logement.id} to={"/logement/"+logement.id+"/#"}><Houses key={logement.id} id={logement.id} image={logement.cover} titre={logement.title} /></NavLink>)}
+                    {listeLogements.map((logement) => <NavLink key={logement.id} to={"./logement/"+logement.id+"/#"}><Houses key={logement.id} id={logement.id} image={logement.cover} titre={logement.title} /></NavLink>)}
                 </div>
             </div>
             <Footer/>

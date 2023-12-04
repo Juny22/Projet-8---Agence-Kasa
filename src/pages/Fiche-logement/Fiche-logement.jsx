@@ -18,11 +18,9 @@ function FicheLogementContent({ ficheLogement }) {
   let noteLogement = [];
   let etoileComplete = true;
   for (let index = 0; index < 5; index++) {
-      // Vérifie si l'index correspond à la note pour déterminer si une étoile est complète ou non
       if(index === parseInt(ficheLogement?.rating)) {
           etoileComplete = false;
       }
-      // Ajoute une étoile remplie ou vide au tableau en fonction de etoileComplete
       if(etoileComplete === true) {
           noteLogement.push(<img key={index} className={sassStyles.etoile} src={EtoileRouge} alt={`${ficheLogement?.rating}/5`}/>)
       } else {
@@ -30,12 +28,10 @@ function FicheLogementContent({ ficheLogement }) {
       }
   }
   
-  // Crée une liste d'éléments <li> à partir des équipements du logement
   const equipementsLogement = ficheLogement?.equipments.map((equipment, index) => (
     <li key={index}>{equipment}</li>
   ));
 
-  // Rendu final de la fiche du logement
   return (
     <div className={sassStyles.fiche}>
       <Carrousel images={ficheLogement?.pictures} />
@@ -70,8 +66,6 @@ function FicheLogementContent({ ficheLogement }) {
 function FicheLogement() {
   const { id } = useParams();
   const ListeLogements = useLoaderData();
-  console.log('ID extrait de l\'URL :', id);
-  console.log('Liste des logements :', ListeLogements);
   const ficheLogement = ListeLogements.find(logement => logement.id === id);
 
   return (

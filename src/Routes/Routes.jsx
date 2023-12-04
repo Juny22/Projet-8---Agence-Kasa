@@ -41,7 +41,7 @@ function RoutesPath() {
       errorElement: <Erreur />
     },
     {
-      path: "/Projet-8---Agence-Kasa/*",
+      path: "*",
       element: <Erreur />,
     }
   ]);

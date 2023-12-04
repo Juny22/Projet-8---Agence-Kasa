@@ -17,25 +17,25 @@ function RoutesPath() {
 
   const router = createBrowserRouter([
     {
-      path: "/Projet-8---Agence-Kasa/",
+      path: "/",
       loader: genericLoader,
       element: <Accueil />,
       errorElement: <Erreur />
     },
     {
-      path: "/Projet-8---Agence-Kasa/accueil",
+      path: "/accueil",
       loader: genericLoader,
       element: <Accueil />,
       errorElement: <Erreur />
     },
     {
-      path: "/Projet-8---Agence-Kasa/logement/:id",
+      path: "/logement/:id",
       loader: genericLoader,
       element: <FicheLogement />,
       errorElement: <Erreur />
     },
     {
-      path: "/Projet-8---Agence-Kasa/a-propos",
+      path: "/a-propos",
       loader: genericLoader,
       element: <APropos />,
       errorElement: <Erreur />

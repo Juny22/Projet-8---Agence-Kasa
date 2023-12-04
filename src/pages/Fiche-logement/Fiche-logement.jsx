@@ -74,7 +74,7 @@ function FicheLogement() {
         {ficheLogement ? (
           <FicheLogementContent ficheLogement={ficheLogement} />
         ) : (
-          <Navigate replace to="/Projet-8---Agence-Kasa/Erreur"/>
+          <Navigate replace to="/Erreur"/>
         )}
       </div>
       <Footer />

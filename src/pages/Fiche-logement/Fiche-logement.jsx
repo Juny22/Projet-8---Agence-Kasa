@@ -10,7 +10,6 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 
 function FicheLogementContent({ ficheLogement }) {
-  // Crée une liste de composants <Name> à partir des tags du logement
   const tagsLogement = ficheLogement?.tags.map((tags, index) => (
     <Name key={index} nom={tags} />
   ));

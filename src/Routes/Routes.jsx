@@ -9,7 +9,7 @@ function RoutesPath() {
   const genericLoader = async ({ params }) => {
     const { id } = params;
     
-    const req = await fetch(`${process.env.PUBLIC_URL}/logements.json?id=${id}`);
+    const req = await fetch(`/logements.json`);
     const res = await req.json();
     
     return res;
